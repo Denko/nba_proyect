@@ -1,0 +1,334 @@
+version: 2
+
+models:
+  - name: base_games
+    description: ""
+    columns:
+      - name: _line
+        data_type: number
+        description: ""
+
+      - name: game_date_est
+        data_type: varchar
+        description: ""
+
+      - name: old_game_id
+        data_type: number
+        description: ""
+
+      - name: game_id
+        data_type: varchar
+        description: ""
+
+      - name: game_status_text
+        data_type: varchar
+        description: ""
+
+      - name: home_team_id
+        data_type: number
+        description: ""
+
+      - name: visitor_team_id
+        data_type: number
+        description: ""
+
+      - name: season
+        data_type: number
+        description: ""
+
+      - name: team_id_home
+        data_type: number
+        description: ""
+
+      - name: pts_home
+        data_type: number
+        description: ""
+
+      - name: fg_pct_home
+        data_type: varchar
+        description: ""
+
+      - name: ft_pct_home
+        data_type: varchar
+        description: ""
+
+      - name: fg_3_pct_home
+        data_type: varchar
+        description: ""
+
+      - name: ast_home
+        data_type: number
+        description: ""
+
+      - name: reb_home
+        data_type: number
+        description: ""
+
+      - name: team_id_away
+        data_type: number
+        description: ""
+
+      - name: pts_away
+        data_type: number
+        description: ""
+
+      - name: fg_pct_away
+        data_type: varchar
+        description: ""
+
+      - name: ft_pct_away
+        data_type: varchar
+        description: ""
+
+      - name: fg_3_pct_away
+        data_type: varchar
+        description: ""
+
+      - name: ast_away
+        data_type: number
+        description: ""
+
+      - name: reb_away
+        data_type: number
+        description: ""
+
+      - name: home_team_wins
+        data_type: number
+        description: ""
+
+      - name: _fivetran_synced
+        data_type: timestamp_tz
+        description: ""
+
+  - name: base_games_details
+    description: ""
+    columns:
+      - name: _line
+        data_type: number
+        description: ""
+
+      - name: games_data_id
+        data_type: varchar
+        description: ""
+
+      - name: game_id
+        data_type: number
+        description: ""
+
+      - name: team_id
+        data_type: number
+        description: ""
+
+      - name: team_abbreviation
+        data_type: varchar
+        description: ""
+
+      - name: team_city
+        data_type: varchar
+        description: ""
+
+      - name: player_id
+        data_type: number
+        description: ""
+
+      - name: player_name
+        data_type: varchar
+        description: ""
+
+      - name: nickname
+        data_type: varchar
+        description: ""
+
+      - name: start_position
+        data_type: varchar
+        description: ""
+
+      - name: comment
+        data_type: varchar
+        description: ""
+
+      - name: minutes
+        data_type: varchar
+        description: ""
+
+      - name: fgm
+        data_type: number
+        description: ""
+
+      - name: fga
+        data_type: number
+        description: ""
+
+      - name: fg_pct
+        data_type: varchar
+        description: ""
+
+      - name: fg_3_m
+        data_type: number
+        description: ""
+
+      - name: fg_3_a
+        data_type: number
+        description: ""
+
+      - name: fg_3_pct
+        data_type: varchar
+        description: ""
+
+      - name: ftm
+        data_type: number
+        description: ""
+
+      - name: fta
+        data_type: number
+        description: ""
+
+      - name: ft_pct
+        data_type: varchar
+        description: ""
+
+      - name: oreb
+        data_type: number
+        description: ""
+
+      - name: dreb
+        data_type: number
+        description: ""
+
+      - name: reb
+        data_type: number
+        description: ""
+
+      - name: ast
+        data_type: number
+        description: ""
+
+      - name: stl
+        data_type: number
+        description: ""
+
+      - name: blk
+        data_type: number
+        description: ""
+
+      - name: turnovers
+        data_type: number
+        description: ""
+
+      - name: pf
+        data_type: number
+        description: ""
+
+      - name: pts
+        data_type: number
+        description: ""
+
+      - name: plus_minus
+        data_type: number
+        description: ""
+
+      - name: _fivetran_synced
+        data_type: timestamp_tz
+        description: ""
+
+  - name: base_players
+    description: ""
+    columns:
+      - name: _line
+        data_type: number
+        description: ""
+
+      - name: player_name
+        data_type: varchar
+        description: ""
+
+      - name: team_id
+        data_type: number
+        description: ""
+
+      - name: old_player_id
+        data_type: number
+        description: ""
+
+      - name: player_id
+        data_type: varchar
+        description: ""
+
+      - name: season
+        data_type: number
+        description: ""
+
+      - name: _fivetran_synced
+        data_type: timestamp_tz
+        description: ""
+
+  - name: base_teams
+    description: ""
+    columns:
+      - name: _line
+        data_type: number
+        description: ""
+
+      - name: league_id
+        data_type: varchar
+        description: ""
+
+      - name: old_team_id
+        data_type: number
+        description: ""
+
+      - name: team_id
+        data_type: varchar
+        description: ""
+
+      - name: min_year
+        data_type: number
+        description: ""
+
+      - name: max_year
+        data_type: number
+        description: ""
+
+      - name: abbreviation
+        data_type: varchar
+        description: ""
+
+      - name: nickname
+        data_type: varchar
+        description: ""
+
+      - name: yearfounded
+        data_type: number
+        description: ""
+
+      - name: city
+        data_type: varchar
+        description: ""
+
+      - name: arena
+        data_type: varchar
+        description: ""
+
+      - name: arenacapacity
+        data_type: number
+        description: ""
+
+      - name: owner
+        data_type: varchar
+        description: ""
+
+      - name: generalmanager
+        data_type: varchar
+        description: ""
+
+      - name: headcoach
+        data_type: varchar
+        description: ""
+
+      - name: dleagueaffiliation
+        data_type: varchar
+        description: ""
+
+      - name: _fivetran_synced
+        data_type: timestamp_tz
+        description: ""
