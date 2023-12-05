@@ -7,7 +7,7 @@ renamed_casted AS (
     SELECT
         
         _LINE, 
-        {{dbt_utils.generate_surrogate_key(['GAME_ID','PLAYER_ID'])}}::varchar(256) as GAMES_DATA_ID,
+        {{dbt_utils.generate_surrogate_key(['GAME_ID','PLAYER_ID'])}}::varchar(256) as GAME_DETAIL_ID,
         GAME_ID, 
         TEAM_ID, 
         TEAM_ABBREVIATION, 
