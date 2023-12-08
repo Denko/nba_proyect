@@ -19,245 +19,245 @@ sources:
 
     tables:
       - name: games
-        description: ""
+        description: "List of all the games"
         columns:
           - name: _line
             data_type: number
-            description: ""
+            description: "row number in the table"
           - name: game_date_est
             data_type: varchar
-            description: ""
+            description: "game date in north american east time"
           - name: game_id
             data_type: number
-            description: ""
+            description: "game ID"
           - name: game_status_text
             data_type: varchar
-            description: ""
+            description: "Game status when is in progress or finished"
           - name: home_team_id
             data_type: number
-            description: ""
+            description: "Home team ID"
           - name: visitor_team_id
             data_type: number
-            description: ""
+            description: "Visitor team ID"
           - name: season
             data_type: number
-            description: ""
+            description: "Season of the game in year"
           - name: team_id_home
             data_type: number
-            description: ""
+            description: "Id for the home team"
           - name: pts_home
             data_type: number
-            description: ""
+            description: "home team points total points in the game"
           - name: fg_pct_home
             data_type: varchar
-            description: ""
+            description: "home field goals percentage"
           - name: ft_pct_home
             data_type: varchar
-            description: ""
+            description: "home free throws percentage"
           - name: fg_3_pct_home
             data_type: varchar
-            description: ""
+            description: "home three point field goals percentage"
           - name: ast_home
             data_type: number
-            description: ""
+            description: "home assists"
           - name: reb_home
             data_type: number
-            description: ""
+            description: "home rebounds"
           - name: team_id_away
             data_type: number
-            description: ""
+            description: "Away team ID"
           - name: pts_away
             data_type: number
-            description: ""
+            description: "Away team points"
           - name: fg_pct_away
             data_type: varchar
-            description: ""
+            description: "Away team field goals percentage"
           - name: ft_pct_away
             data_type: varchar
-            description: ""
+            description: "Away team free throws percentage"
           - name: fg_3_pct_away
             data_type: varchar
-            description: ""
+            description: "Away team three point field goals percentage"
           - name: ast_away
             data_type: number
-            description: ""
+            description: "Away team assists"
           - name: reb_away
             data_type: number
-            description: ""
+            description: "Away team rebounds"
           - name: home_team_wins
             data_type: number
-            description: ""
+            description: "If home team wins is 1, else is 0"
           - name: _fivetran_synced
             data_type: timestamp_tz
-            description: ""
+            description: "data loaded time for this entry"
 
       - name: games_details
-        description: ""
+        description: "player details for each game"
         columns:
           - name: _line
             data_type: number
-            description: ""
+            description: "row number in the table"
           - name: game_id
             data_type: number
-            description: ""
+            description: "Game ID"
           - name: team_id
             data_type: number
-            description: ""
+            description: "Team ID"
           - name: team_abbreviation
             data_type: varchar
-            description: ""
+            description: "team abbreviation in three letters"
           - name: team_city
             data_type: varchar
-            description: ""
+            description: "Team city"
           - name: player_id
             data_type: number
-            description: ""
+            description: "Player ID"
           - name: player_name
             data_type: varchar
-            description: ""
+            description: "Player name"
           - name: nickname
             data_type: varchar
-            description: ""
+            description: "player nickname"
           - name: start_position
             data_type: varchar
-            description: ""
+            description: "start position in the game, null if is in bench"
           - name: comment
             data_type: varchar
-            description: ""
+            description: "comments for the exceptions"
           - name: min
             data_type: varchar
-            description: ""
+            description: "total minutes for a player in the game"
           - name: fgm
             data_type: number
-            description: ""
+            description: "Player field goals made"
           - name: fga
             data_type: number
-            description: ""
+            description: "Player field goals attempted"
           - name: fg_pct
             data_type: varchar
-            description: ""
+            description: "Player field goals percentage"
           - name: fg_3_m
             data_type: number
-            description: ""
+            description: "Player three point field goals made"
           - name: fg_3_a
             data_type: number
-            description: ""
+            description: "Player three point field goals attempted"
           - name: fg_3_pct
             data_type: varchar
-            description: ""
+            description: "Player three points field goals percentage"
           - name: ftm
             data_type: number
-            description: ""
+            description: "Player free throws made"
           - name: fta
             data_type: number
-            description: ""
+            description: "Player free throws attempted"
           - name: ft_pct
             data_type: varchar
-            description: ""
+            description: "Player free throws percentage"
           - name: oreb
             data_type: number
-            description: ""
+            description: "Player offensive rebounds"
           - name: dreb
             data_type: number
-            description: ""
+            description: "Player defensive rebounds"
           - name: reb
             data_type: number
-            description: ""
+            description: "Player total rebounds"
           - name: ast
             data_type: number
-            description: ""
+            description: "Player assists"
           - name: stl
             data_type: number
-            description: ""
+            description: "Player steals"
           - name: blk
             data_type: number
-            description: ""
+            description: "Player blocks"
           - name: to
             data_type: number
-            description: ""
+            description: "Player turnovers"
           - name: pf
             data_type: number
-            description: ""
+            description: "Player personal fouls"
           - name: pts
             data_type: number
-            description: ""
+            description: "Player points"
           - name: plus_minus
             data_type: number
-            description: ""
+            description: "Player plus-minus is a stat for points difference with the other team when the player is on the court"
           - name: _fivetran_synced
             data_type: timestamp_tz
-            description: ""
+            description: "data loaded time for this entry"
 
       - name: players
-        description: ""
+        description: "list of all the players who played in the seasons"
         columns:
           - name: _line
             data_type: number
-            description: ""
+            description: "row number in the table"
           - name: player_name
             data_type: varchar
-            description: ""
+            description: "name of the player"
           - name: team_id
             data_type: number
-            description: ""
+            description: "ID for the team's player in this season"
           - name: player_id
             data_type: number
-            description: ""
+            description: "Player ID"
           - name: season
             data_type: number
-            description: ""
+            description: "The season"
           - name: _fivetran_synced
             data_type: timestamp_tz
-            description: ""
+            description: "data loaded time for this entry"
 
       - name: teams
-        description: ""
+        description: "List of all the teams for these seasons"
         columns:
           - name: _line
             data_type: number
-            description: ""
+            description: "row number in the table"
           - name: league_id
             data_type: varchar
-            description: ""
+            description: "ID for diferent leagues. NBA is 00"
           - name: team_id
             data_type: number
-            description: ""
+            description: "ID Team"
           - name: min_year
             data_type: number
-            description: ""
+            description: "minimum year apperance in data"
           - name: max_year
             data_type: number
-            description: ""
+            description: "last season played until current"
           - name: abbreviation
             data_type: varchar
-            description: ""
+            description: "team abbreviation in three letters"
           - name: nickname
             data_type: varchar
-            description: ""
+            description: "player nickname"
           - name: yearfounded
             data_type: number
-            description: ""
+            description: "Team fundation year"
           - name: city
             data_type: varchar
-            description: ""
+            description: "Team city"
           - name: arena
             data_type: varchar
-            description: ""
+            description: "Team Arena"
           - name: arenacapacity
             data_type: number
-            description: ""
+            description: "Arena capacity"
           - name: owner
             data_type: varchar
-            description: ""
+            description: "Owner of the team"
           - name: generalmanager
             data_type: varchar
-            description: ""
+            description: "General manager of the team"
           - name: headcoach
             data_type: varchar
-            description: ""
+            description: "Headcoach of the team"
           - name: dleagueaffiliation
             data_type: varchar
-            description: ""
+            description: "D League team affiliated to the team"
           - name: _fivetran_synced
             data_type: timestamp_tz
-            description: ""
+            description: "data loaded time for this entry"

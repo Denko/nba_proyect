@@ -17,7 +17,7 @@ renamed_casted AS (
         NICKNAME::varchar(40) as player_nickname, 
         DECODE(START_POSITION,null,'bench',START_POSITION)::varchar(5) as start_position, 
         DECODE(COMMENT,null,'nc',COMMENT)::varchar(40) as comment, 
-        DECODE(MINUTES,null,'00:00',left(MINUTES,5))::varchar(5) as minutes, 
+        DECODE(MINUTES,null,'00:00',left(MINUTES,5))::varchar(5) as minutes, -- ARREGLAR para que sea tipo time en vez de string
         DECODE(FGM,null,'0',FGM)::integer as field_goals_made, 
         DECODE(FGA,null,'0',FGA)::integer as field_goals_attempted, 
         replace(FG_PCT,',','.')::number(4,3) as field_goals_pct, -- Contiene nulos al ser porcentaje
