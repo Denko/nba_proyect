@@ -1,17 +1,25 @@
-WITH arenas AS (
+WITH teams1 AS (
     SELECT *
     FROM {{ ref('stg_teams') }}
+),
+teams2 AS (
+    SELECT *
+    FROM {{ ref('stg_team_summaries_seasons') }}
+    WHERE season > 2002
 ),
 
 renamed_casted AS (
     SELECT distinct
 
-        arena_id,
-        arena_name,
-        arena_capacity,
-        city
+        teams2.arena_id,
+        teams2.arena_name,
+        teams1.arena_capacity,
+        teams2.city
 
-    FROM arenas
+    FROM teams1
+    right join
+    teams2
+    on teams1.arena_id = teams2.arena_id
 )
 
 SELECT * FROM renamed_casted

@@ -13,6 +13,7 @@ renamed_casted AS (
         MAX_YEAR, 
         ABBREVIATION, 
         NICKNAME, 
+        concat(CITY, ' ', NICKNAME)::varchar(128) AS full_name,
         YEARFOUNDED, 
         CITY, 
         ARENA, 

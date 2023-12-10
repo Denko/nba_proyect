@@ -9,7 +9,7 @@ renamed_casted AS (
         _LINE::integer AS _line, 
         GAME_DETAIL_ID::varchar(256) as game_detail_id,
         {{dbt_utils.generate_surrogate_key(['GAME_ID'])}}::varchar(256) as game_id, 
-        {{dbt_utils.generate_surrogate_key(['TEAM_ID'])}}::varchar(256) as team_id, 
+        {{dbt_utils.generate_surrogate_key(['TEAM_ID'])}}::varchar(256) as game_team_id, -- Sólo para matchear con la fact fct_games_details al no tener el team_id por nombre de team
         TEAM_ABBREVIATION::varchar(3) as team_abbreviation, 
         TEAM_CITY::varchar(40) as team_city, 
         player_id::varchar(256) as player_id, 

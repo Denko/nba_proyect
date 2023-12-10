@@ -14,13 +14,14 @@ games AS (
     SELECT *
     FROM {{ ref("stg_games") }}
 ),
-
+ -- Arreglar cuando tenga el cambio en los teams
 renamed_casted AS (
     SELECT
         
         game_detail_id,
-        games_details.game_id, 
-        games_details.team_id, 
+        games_details.game_id,
+        teams.team_id, 
+        -- games_details.game_team_id, -- Solo para el match con teams
         games_details.player_id, 
         start_position, 
         comment, 
@@ -47,7 +48,7 @@ renamed_casted AS (
 
     FROM games_details
     left join
-    teams on games_details.team_id = teams.team_id
+    teams on games_details.game_team_id = teams.games_team_id
     left join
     games on games_details.game_id = games.game_id
     left join
