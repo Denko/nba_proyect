@@ -1,6 +1,6 @@
 WITH games AS (
     SELECT *
-    FROM {{ source('games_data','games') }}
+    FROM {{ source('google_drive','games') }}
 ),
 
 renamed_casted AS (
@@ -35,3 +35,4 @@ renamed_casted AS (
 )
 
 SELECT * FROM renamed_casted
+

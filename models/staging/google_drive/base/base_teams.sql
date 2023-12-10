@@ -1,6 +1,6 @@
 WITH teams AS (
     SELECT *
-    FROM {{ source('games_data','teams') }}
+    FROM {{ source('google_drive','teams') }}
 ),
 
 renamed_casted AS (

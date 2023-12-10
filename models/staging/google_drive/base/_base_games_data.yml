@@ -332,3 +332,154 @@ models:
       - name: _fivetran_synced
         data_type: timestamp_tz
         description: ""
+        
+  - name: base_player_totals_seasons
+    description: ""
+    columns:
+      - name: _line
+        data_type: number
+        description: ""
+
+      - name: seas_id
+        data_type: number
+        description: ""
+
+      - name: season
+        data_type: number
+        description: ""
+
+      - name: player_id
+        data_type: number
+        description: ""
+
+      - name: player
+        data_type: varchar
+        description: ""
+
+      - name: birth_year
+        data_type: varchar
+        description: ""
+
+      - name: pos
+        data_type: varchar
+        description: ""
+
+      - name: age
+        data_type: varchar
+        description: ""
+
+      - name: experience
+        data_type: number
+        description: ""
+
+      - name: lg
+        data_type: varchar
+        description: ""
+
+      - name: tm
+        data_type: varchar
+        description: ""
+
+      - name: g
+        data_type: number
+        description: ""
+
+      - name: gs
+        data_type: varchar
+        description: ""
+
+      - name: mp
+        data_type: varchar
+        description: ""
+
+      - name: fg
+        data_type: number
+        description: ""
+
+      - name: fga
+        data_type: number
+        description: ""
+
+      - name: fg_percent
+        data_type: varchar
+        description: ""
+
+      - name: x_3_p
+        data_type: varchar
+        description: ""
+
+      - name: x_3_pa
+        data_type: varchar
+        description: ""
+
+      - name: x_3_p_percent
+        data_type: varchar
+        description: ""
+
+      - name: x_2_p
+        data_type: number
+        description: ""
+
+      - name: x_2_pa
+        data_type: number
+        description: ""
+
+      - name: x_2_p_percent
+        data_type: varchar
+        description: ""
+
+      - name: e_fg_percent
+        data_type: varchar
+        description: ""
+
+      - name: ft
+        data_type: number
+        description: ""
+
+      - name: fta
+        data_type: number
+        description: ""
+
+      - name: ft_percent
+        data_type: varchar
+        description: ""
+
+      - name: orb
+        data_type: varchar
+        description: ""
+
+      - name: drb
+        data_type: varchar
+        description: ""
+
+      - name: trb
+        data_type: varchar
+        description: ""
+
+      - name: ast
+        data_type: number
+        description: ""
+
+      - name: stl
+        data_type: varchar
+        description: ""
+
+      - name: blk
+        data_type: varchar
+        description: ""
+
+      - name: tov
+        data_type: varchar
+        description: ""
+
+      - name: pf
+        data_type: number
+        description: ""
+
+      - name: pts
+        data_type: number
+        description: ""
+
+      - name: _fivetran_synced
+        data_type: timestamp_tz
+        description: ""

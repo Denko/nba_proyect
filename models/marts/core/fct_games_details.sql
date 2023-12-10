@@ -19,8 +19,8 @@ renamed_casted AS (
     SELECT
         
         game_detail_id,
-        games.game_id, 
-        teams.team_id, 
+        games_details.game_id, 
+        games_details.team_id, 
         games_details.player_id, 
         start_position, 
         comment, 

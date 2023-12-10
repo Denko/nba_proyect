@@ -35,6 +35,10 @@ renamed_casted AS (
         home_team_wins
 
     FROM games
+    left join teams
+    on games.home_team_id = teams.team_id or games.home_team_id = teams.team_id
+    left join dates
+    on games.game_date_est = dates.date_forecast
 )
 
 SELECT * FROM renamed_casted
