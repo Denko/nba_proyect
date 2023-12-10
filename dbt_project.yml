@@ -46,6 +46,8 @@ models:
         +schema: games_data
       stats:
         +schema: stats
+      google_drive:
+        +schema: google_drive
       
     marts:
       +materialized: table

@@ -12,7 +12,7 @@ renamed_casted AS (
         {{dbt_utils.generate_surrogate_key(['TEAM_ID'])}}::varchar(256) as team_id, 
         TEAM_ABBREVIATION::varchar(3) as team_abbreviation, 
         TEAM_CITY::varchar(40) as team_city, 
-        {{dbt_utils.generate_surrogate_key(['PLAYER_ID'])}}::varchar(256) as player_id, 
+        player_id::varchar(256) as player_id, 
         PLAYER_NAME::varchar(120) as player_name,
         NICKNAME::varchar(40) as player_nickname, 
         DECODE(START_POSITION,null,'bench',START_POSITION)::varchar(5) as start_position, 

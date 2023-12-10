@@ -13,6 +13,7 @@ renamed as (
         seas_id::integer as old_season_id,
         season::integer as season,
         player_id::integer as old_player_id,
+        {{dbt_utils.generate_surrogate_key(['player'])}}::varchar(256) AS player_id, 
         player::varchar(120) as player_name,
         DECODE(birth_year,'NA',null,birth_year)::integer as player_birth_year,
         pos::varchar(10) as player_position,

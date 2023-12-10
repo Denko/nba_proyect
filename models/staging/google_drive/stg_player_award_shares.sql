@@ -12,6 +12,7 @@ renamed as (
         _LINE::integer AS _line,
         season::integer as season,
         award::varchar(40) as award_type,
+        {{dbt_utils.generate_surrogate_key(['player'])}}::varchar(256) as player_id,
         player::varchar(120) as player_name,
         age::integer as player_age,
         tm::varchar(3) as team_abbreviation,
