@@ -1,0 +1,448 @@
+version: 2
+
+models:
+  - name: dim_arenas
+    description: ""
+    columns:
+      - name: arena_id
+        data_type: varchar
+        description: ""
+
+      - name: arena_name
+        data_type: varchar
+        description: ""
+
+      - name: arena_capacity
+        data_type: number
+        description: ""
+
+      - name: city
+        data_type: varchar
+        description: ""
+
+  - name: dim_date
+    description: ""
+    columns:
+      - name: date_forecast
+        data_type: date
+        description: ""
+
+      - name: date_id
+        data_type: number
+        description: ""
+
+      - name: year_date
+        data_type: number
+        description: ""
+
+      - name: month_date
+        data_type: number
+        description: ""
+
+      - name: desc_month
+        data_type: varchar
+        description: ""
+
+      - name: year_month_id
+        data_type: number
+        description: ""
+
+      - name: day_before
+        data_type: date
+        description: ""
+
+      - name: year_week_day
+        data_type: varchar
+        description: ""
+
+      - name: week_date
+        data_type: number
+        description: ""
+
+  - name: dim_games
+    description: ""
+    columns:
+      - name: game_date_est
+        data_type: date
+        description: ""
+
+      - name: game_id
+        data_type: varchar
+        description: ""
+
+      - name: game_status
+        data_type: varchar
+        description: ""
+
+      - name: home_team_id
+        data_type: varchar
+        description: ""
+
+      - name: visitor_team_id
+        data_type: varchar
+        description: ""
+
+      - name: season
+        data_type: number
+        description: ""
+
+      - name: home_points
+        data_type: number
+        description: ""
+
+      - name: home_field_goals_pct
+        data_type: number
+        description: ""
+
+      - name: home_free_throws_pct
+        data_type: number
+        description: ""
+
+      - name: home_3point_field_goals_pct
+        data_type: number
+        description: ""
+
+      - name: home_assists
+        data_type: number
+        description: ""
+
+      - name: home_rebounds
+        data_type: number
+        description: ""
+
+      - name: away_points
+        data_type: number
+        description: ""
+
+      - name: away_field_goals_pct
+        data_type: number
+        description: ""
+
+      - name: away_free_throws_pct
+        data_type: number
+        description: ""
+
+      - name: away_3point_field_goals_pct
+        data_type: number
+        description: ""
+
+      - name: away_assists
+        data_type: number
+        description: ""
+
+      - name: away_rebounds
+        data_type: number
+        description: ""
+
+      - name: home_team_wins
+        data_type: boolean
+        description: ""
+
+  - name: dim_players
+    description: ""
+    columns:
+      - name: player_id
+        data_type: varchar
+        description: ""
+
+      - name: player_name
+        data_type: varchar
+        description: ""
+
+  - name: dim_teams
+    description: ""
+    columns:
+      - name: team_id
+        data_type: varchar
+        description: ""
+
+      - name: nickname
+        data_type: varchar
+        description: ""
+
+      - name: full_name
+        data_type: varchar
+        description: ""
+
+      - name: first_participation_year
+        data_type: number
+        description: ""
+
+      - name: abbreviation
+        data_type: varchar
+        description: ""
+
+      - name: fundation_year
+        data_type: number
+        description: ""
+
+      - name: city
+        data_type: varchar
+        description: ""
+
+      - name: arena_id
+        data_type: varchar
+        description: ""
+
+      - name: owner
+        data_type: varchar
+        description: ""
+
+      - name: general_manager
+        data_type: varchar
+        description: ""
+
+      - name: headcoach
+        data_type: varchar
+        description: ""
+
+      - name: d_league_affiliation
+        data_type: varchar
+        description: ""
+
+      - name: total_minutes_played
+        data_type: number
+        description: ""
+
+      - name: total_games_played
+        data_type: number
+        description: ""
+
+  - name: fct_arenas_seasons
+    description: ""
+    columns:
+      - name: arena_id
+        data_type: varchar
+        description: ""
+
+      - name: team_id
+        data_type: varchar
+        description: ""
+
+      - name: arena_name
+        data_type: varchar
+        description: ""
+
+      - name: arena_capacity
+        data_type: number
+        description: ""
+
+      - name: total_attend
+        data_type: number
+        description: ""
+
+      - name: average_attend
+        data_type: number
+        description: ""
+
+      - name: city
+        data_type: varchar
+        description: ""
+
+      - name: season
+        data_type: number
+        description: ""
+
+  - name: fct_games_details
+    description: ""
+    columns:
+      - name: game_detail_id
+        data_type: varchar
+        description: ""
+
+      - name: game_id
+        data_type: varchar
+        description: ""
+
+      - name: team_id
+        data_type: varchar
+        description: ""
+
+      - name: player_id
+        data_type: varchar
+        description: ""
+
+      - name: start_position
+        data_type: varchar
+        description: ""
+
+      - name: comment
+        data_type: varchar
+        description: ""
+
+      - name: minutes
+        data_type: varchar
+        description: ""
+
+      - name: field_goals_made
+        data_type: number
+        description: ""
+
+      - name: field_goals_attempted
+        data_type: number
+        description: ""
+
+      - name: field_goals_pct
+        data_type: number
+        description: ""
+
+      - name: three_points_field_goals_made
+        data_type: number
+        description: ""
+
+      - name: three_points_field_goals_attempted
+        data_type: number
+        description: ""
+
+      - name: three_points_field_goals_pct
+        data_type: number
+        description: ""
+
+      - name: free_throws_made
+        data_type: number
+        description: ""
+
+      - name: free_throws_attempted
+        data_type: number
+        description: ""
+
+      - name: free_throws_pct
+        data_type: number
+        description: ""
+
+      - name: offensive_rebounds
+        data_type: number
+        description: ""
+
+      - name: defensive_rebounds
+        data_type: number
+        description: ""
+
+      - name: total_rebounds
+        data_type: number
+        description: ""
+
+      - name: assists
+        data_type: number
+        description: ""
+
+      - name: steals
+        data_type: number
+        description: ""
+
+      - name: blocks
+        data_type: number
+        description: ""
+
+      - name: turnovers
+        data_type: number
+        description: ""
+
+      - name: personal_fouls
+        data_type: number
+        description: ""
+
+      - name: points
+        data_type: number
+        description: ""
+
+      - name: plus_minus
+        data_type: number
+        description: ""
+
+  - name: fct_players_teams
+    description: ""
+    columns:
+      - name: player_id
+        data_type: varchar
+        description: ""
+
+      - name: team_id
+        data_type: varchar
+        description: ""
+
+      - name: season
+        data_type: number
+        description: ""
+
+  - name: fct_player_awards
+    description: ""
+    columns:
+      - name: season
+        data_type: number
+        description: ""
+
+      - name: award_type
+        data_type: varchar
+        description: ""
+
+      - name: player_id
+        data_type: varchar
+        description: ""
+
+      - name: player_name
+        data_type: varchar
+        description: ""
+
+      - name: player_age
+        data_type: number
+        description: ""
+
+      - name: team_abbreviation
+        data_type: varchar
+        description: ""
+
+      - name: first_points
+        data_type: number
+        description: ""
+
+      - name: player_points_won
+        data_type: number
+        description: ""
+
+      - name: max_award_points
+        data_type: number
+        description: ""
+
+      - name: share_pct
+        data_type: number
+        description: ""
+
+      - name: winner
+        data_type: boolean
+        description: ""
+
+      - name: old_season_id
+        data_type: number
+        description: ""
+
+      - name: old_player_id
+        data_type: number
+        description: ""
+
+  - name: fct_all_star_selections
+    description: ""
+    columns:
+      - name: player_id
+        data_type: varchar
+        description: ""
+
+      - name: player_name
+        data_type: varchar
+        description: ""
+
+      - name: team_name
+        data_type: varchar
+        description: ""
+
+      - name: league_name
+        data_type: varchar
+        description: ""
+
+      - name: season
+        data_type: number
+        description: ""
+
+      - name: is_replaced
+        data_type: boolean
+        description: ""
