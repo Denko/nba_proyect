@@ -1,6 +1,7 @@
 version: 2
 
 models:
+  
   - name: stg_game_details
     description: ""
     columns:
