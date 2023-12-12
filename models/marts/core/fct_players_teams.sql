@@ -7,7 +7,7 @@ teams AS (
     FROM {{ ref('stg_teams') }}
 ),
 dates AS (
-    SELECT *
+    SELECT distinct year_date
     FROM {{ ref('stg_dates') }}
 ),
 

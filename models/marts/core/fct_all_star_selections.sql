@@ -18,6 +18,10 @@ player_totals_seasons as (
     from {{ ref('stg_player_totals_seasons') }}
 
 ),
+dates AS (
+    SELECT distinct year_date
+    FROM {{ ref('stg_dates') }}
+),
 
 renamed as (
 
@@ -34,6 +38,8 @@ renamed as (
     left join
     player_totals_seasons
     on all_star_selections.player_id = player_totals_seasons.player_id
+    inner join 
+    dates on all_star_selections.season = dates.year_date
 
     order by all_star_selections.season desc, all_star_selections.team_name
 

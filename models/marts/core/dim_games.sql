@@ -6,39 +6,20 @@ teams AS (
     SELECT *
     FROM {{ ref('stg_teams') }}
 ),
-dates AS (
-    SELECT *
-    FROM {{ ref('stg_dates') }}
-),
- -- CREAR UNIONES 
+
 renamed_casted AS (
     SELECT
 
-        game_date_est, 
         game_id, 
         game_status, 
-        home_team_id, 
-        visitor_team_id, 
-        season,  
-        home_points, 
-        home_field_goals_pct, 
-        home_free_throws_pct, 
-        home_3point_field_goals_pct, 
-        home_assists, 
-        home_rebounds, 
-        away_points, 
-        away_field_goals_pct, 
-        away_free_throws_pct, 
-        away_3point_field_goals_pct, 
-        away_assists, 
-        away_rebounds, 
+        game_home_team_id, 
+        game_visitor_team_id, 
         home_team_wins
 
     FROM games
     left join teams
-    on games.home_team_id = teams.team_id or games.home_team_id = teams.team_id
-    left join dates
-    on games.game_date_est = dates.date_forecast
+    on games.game_home_team_id = teams.team_id or games.game_visitor_team_id = teams.team_id
+
 )
 
 SELECT * FROM renamed_casted

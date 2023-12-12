@@ -27,27 +27,44 @@ sources:
           - name: game_date_est
             data_type: varchar
             description: "game date in north american east time"
+            tests:
+              - not_null
           - name: game_id
             data_type: number
             description: "game ID"
+            tests:
+              - unique
+              - not_null
           - name: game_status_text
             data_type: varchar
             description: "Game status when is in progress or finished"
+            tests:
+              - not_null
           - name: home_team_id
             data_type: number
             description: "Home team ID"
+            tests:
+              - not_null
           - name: visitor_team_id
             data_type: number
             description: "Visitor team ID"
+            tests:
+              - not_null
           - name: season
             data_type: number
             description: "Season of the game in year"
+            tests:
+              - not_null
           - name: team_id_home
             data_type: number
             description: "Id for the home team"
+            tests:
+              - not_null
           - name: pts_home
             data_type: number
             description: "home team points total points in the game"
+            tests:
+              - not_null
           - name: fg_pct_home
             data_type: varchar
             description: "home field goals percentage"
@@ -66,9 +83,13 @@ sources:
           - name: team_id_away
             data_type: number
             description: "Away team ID"
+            tests:
+              - not_null
           - name: pts_away
             data_type: number
             description: "Away team points"
+            tests:
+              - not_null
           - name: fg_pct_away
             data_type: varchar
             description: "Away team field goals percentage"
@@ -87,6 +108,8 @@ sources:
           - name: home_team_wins
             data_type: number
             description: "If home team wins is 1, else is 0"
+            tests:
+              - not_null
           - name: _fivetran_synced
             data_type: timestamp_tz
             description: "data loaded time for this entry"
@@ -264,227 +287,227 @@ sources:
 
 
       - name: all_star_selections
-        description: ""
+        description: "players selected to all stars teams by date"
         columns:
           - name: _line
             data_type: number
-            description: ""
+            description: "row number in the table"
           - name: player
             data_type: varchar
-            description: ""
+            description: "player name"
           - name: team
             data_type: varchar
-            description: ""
+            description: "player team"
           - name: lg
             data_type: varchar
-            description: ""
+            description: "league"
           - name: season
             data_type: number
-            description: ""
+            description: "season"
           - name: replaced
             data_type: boolean
-            description: ""
+            description: "if the player is replaced in team for another"
           - name: _fivetran_synced
             data_type: timestamp_tz
-            description: ""
+            description: "data loaded time for this entry"
 
       - name: player_award_shares
-        description: ""
+        description: "players who have won awards by season"
         columns:
           - name: _line
             data_type: number
-            description: ""
+            description: "row number in the table"
           - name: season
             data_type: number
-            description: ""
+            description: "season"
           - name: award
             data_type: varchar
-            description: ""
+            description: "award type"
           - name: player
             data_type: varchar
-            description: ""
+            description: "player name"
           - name: age
             data_type: number
-            description: ""
+            description: "age"
           - name: tm
             data_type: varchar
-            description: ""
+            description: "player team abreviation"
           - name: first
             data_type: varchar
-            description: ""
+            description: "times the player was voted first"
           - name: pts_won
             data_type: varchar
-            description: ""
+            description: "points won"
           - name: pts_max
             data_type: varchar
-            description: ""
+            description: "max points for this award"
           - name: share
             data_type: varchar
-            description: ""
+            description: "percentaje between points won and total points"
           - name: winner
             data_type: varchar
-            description: ""
+            description: "true if won the award, false else"
           - name: seas_id
             data_type: number
-            description: ""
+            description: "season ID"
           - name: player_id
             data_type: number
-            description: ""
+            description: "player ID"
           - name: _fivetran_synced
             data_type: timestamp_tz
-            description: ""
+            description: "data loaded time for this entry"
 
       - name: player_totals_seasons
-        description: ""
+        description: "player total stats by season"
         columns:
           - name: _line
             data_type: number
-            description: ""
+            description: "row number in the table"
           - name: seas_id
             data_type: number
-            description: ""
+            description: "season ID"
           - name: season
             data_type: number
-            description: ""
+            description: "season"
           - name: player_id
             data_type: number
-            description: ""
+            description: "player ID"
           - name: player
             data_type: varchar
-            description: ""
+            description: "Player name"
           - name: birth_year
             data_type: varchar
-            description: ""
+            description: "player birth year"
           - name: pos
             data_type: varchar
-            description: ""
+            description: "player position"
           - name: age
             data_type: varchar
-            description: ""
+            description: "player age"
           - name: experience
             data_type: number
-            description: ""
+            description: "years of experience"
           - name: lg
             data_type: varchar
-            description: ""
+            description: "League"
           - name: tm
             data_type: varchar
-            description: ""
+            description: "team abreviation"
           - name: g
             data_type: number
-            description: ""
+            description: "games played"
           - name: gs
             data_type: varchar
-            description: ""
+            description: "games started"
           - name: mp
             data_type: varchar
-            description: ""
+            description: "minutes played"
           - name: fg
             data_type: number
-            description: ""
+            description: "field goals made"
           - name: fga
             data_type: number
-            description: ""
+            description: "field goals attempted"
           - name: fg_percent
             data_type: varchar
-            description: ""
+            description: "field goals percentage"
           - name: x_3_p
             data_type: varchar
-            description: ""
+            description: "three point field goals made"
           - name: x_3_pa
             data_type: varchar
-            description: ""
+            description: "three point field goals attempted"
           - name: x_3_p_percent
             data_type: varchar
-            description: ""
+            description: "three point field goals percentage"
           - name: x_2_p
             data_type: number
-            description: ""
+            description: "two point field goals made"
           - name: x_2_pa
             data_type: number
-            description: ""
+            description: "two point field goals attempted"
           - name: x_2_p_percent
             data_type: varchar
-            description: ""
+            description: "two point field goals percentage"
           - name: e_fg_percent
             data_type: varchar
-            description: ""
+            description: "effective field goals percentage"
           - name: ft
             data_type: number
-            description: ""
+            description: "free throws made"
           - name: fta
             data_type: number
-            description: ""
+            description: "free throws attempted"
           - name: ft_percent
             data_type: varchar
-            description: ""
+            description: "free throws percentage"
           - name: orb
             data_type: varchar
-            description: ""
+            description: "offensive rebounds"
           - name: drb
             data_type: varchar
-            description: ""
+            description: "defensive rebounds"
           - name: trb
             data_type: varchar
-            description: ""
+            description: "total rebounds"
           - name: ast
             data_type: number
-            description: ""
+            description: "assists"
           - name: stl
             data_type: varchar
-            description: ""
+            description: "steals"
           - name: blk
             data_type: varchar
-            description: ""
+            description: "blocks"
           - name: tov
             data_type: varchar
-            description: ""
+            description: "turnovers"
           - name: pf
             data_type: number
-            description: ""
+            description: "personal fouls"
           - name: pts
             data_type: number
-            description: ""
+            description: "total points"
           - name: _fivetran_synced
             data_type: timestamp_tz
-            description: ""
+            description: "data loaded time for this entry"
 
       - name: team_summaries_seasons
-        description: ""
+        description: "team stats and percentages"
         columns:
           - name: _line
             data_type: number
-            description: ""
+            description: "row number in the table"
           - name: season
             data_type: number
-            description: ""
+            description: "season"
           - name: lg
             data_type: varchar
-            description: ""
+            description: "league"
           - name: team
             data_type: varchar
-            description: ""
+            description: "team name"
           - name: abbreviation
             data_type: varchar
-            description: ""
+            description: "team abbreviation"
           - name: playoffs
             data_type: boolean
-            description: ""
+            description: "true if the team went to playoffs"
           - name: age
             data_type: varchar
-            description: ""
+            description: "team age"
           - name: w
             data_type: varchar
-            description: ""
+            description: "wins"
           - name: l
             data_type: varchar
-            description: ""
+            description: "loses"
           - name: pw
             data_type: varchar
-            description: ""
+            description: "power wins"
           - name: pl
             data_type: varchar
-            description: ""
+            description: "power loses"
           - name: mov
             data_type: varchar
             description: ""
@@ -496,13 +519,13 @@ sources:
             description: ""
           - name: o_rtg
             data_type: varchar
-            description: ""
+            description: "offensive average points"
           - name: d_rtg
             data_type: varchar
-            description: ""
+            description: "defensive average points"
           - name: n_rtg
             data_type: varchar
-            description: ""
+            description: "average difference between o_rtg and d_rtg"
           - name: pace
             data_type: varchar
             description: ""
@@ -550,14 +573,14 @@ sources:
             description: ""
           - name: _fivetran_synced
             data_type: timestamp_tz
-            description: ""
+            description: "data loaded time for this entry"
 
       - name: team_totals_seasons
         description: ""
         columns:
           - name: _line
             data_type: number
-            description: ""
+            description: "row number in the table"
           - name: season
             data_type: number
             description: ""
@@ -644,4 +667,4 @@ sources:
             description: ""
           - name: _fivetran_synced
             data_type: timestamp_tz
-            description: ""
+            description: "data loaded time for this entry"

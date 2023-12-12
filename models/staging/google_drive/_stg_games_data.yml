@@ -2,7 +2,7 @@ version: 2
 
 models:
   
-  - name: stg_game_details
+  - name: stg_games_details
     description: ""
     columns:
       - name: _line
@@ -17,9 +17,11 @@ models:
         data_type: varchar
         description: ""
 
-      - name: team_id
+      - name: game_team_id
         data_type: varchar
         description: ""
+        tests:
+          - not_null
 
       - name: team_abbreviation
         data_type: varchar
@@ -30,8 +32,8 @@ models:
         description: ""
 
       - name: player_id
-        data_type: varchar
-        description: ""
+        tests:
+          - not_null
 
       - name: player_name
         data_type: varchar
@@ -238,6 +240,8 @@ models:
       - name: team_id
         data_type: number
         description: ""
+        tests:
+          - not_null
 
       - name: old_player_id
         data_type: number
