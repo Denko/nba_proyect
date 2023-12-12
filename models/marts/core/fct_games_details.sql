@@ -8,7 +8,7 @@ teams AS (
 ),
 players AS (
     SELECT *
-    FROM {{ ref("dim_players") }}
+    FROM {{ ref("int_players") }}
 ),
 games AS (
     SELECT *

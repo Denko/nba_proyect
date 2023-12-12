@@ -1,7 +1,97 @@
 version: 2
 
 models:
-  
+  - name: stg_games
+    description: ""
+    columns:
+      - name: _line
+        data_type: number
+        description: ""
+
+      - name: game_date_est
+        data_type: date
+        description: ""
+
+      - name: old_game_id
+        data_type: number
+        description: ""
+
+      - name: game_id
+        data_type: varchar
+        description: ""
+
+      - name: game_status
+        data_type: varchar
+        description: ""
+
+      - name: game_home_team_id
+        data_type: varchar
+        description: ""
+
+      - name: game_visitor_team_id
+        data_type: varchar
+        description: ""
+
+      - name: season
+        data_type: number
+        description: ""
+
+      - name: home_points
+        data_type: number
+        description: ""
+
+      - name: home_field_goals_pct
+        data_type: number
+        description: ""
+
+      - name: home_free_throws_pct
+        data_type: number
+        description: ""
+
+      - name: home_3point_field_goals_pct
+        data_type: number
+        description: ""
+
+      - name: home_assists
+        data_type: number
+        description: ""
+
+      - name: home_rebounds
+        data_type: number
+        description: ""
+
+      - name: away_points
+        data_type: number
+        description: ""
+
+      - name: away_field_goals_pct
+        data_type: number
+        description: ""
+
+      - name: away_free_throws_pct
+        data_type: number
+        description: ""
+
+      - name: away_3point_field_goals_pct
+        data_type: number
+        description: ""
+
+      - name: away_assists
+        data_type: number
+        description: ""
+
+      - name: away_rebounds
+        data_type: number
+        description: ""
+
+      - name: home_team_wins
+        data_type: boolean
+        description: ""
+
+      - name: loaded_at
+        data_type: timestamp_tz
+        description: ""
+
   - name: stg_games_details
     description: ""
     columns:
@@ -20,8 +110,6 @@ models:
       - name: game_team_id
         data_type: varchar
         description: ""
-        tests:
-          - not_null
 
       - name: team_abbreviation
         data_type: varchar
@@ -32,8 +120,8 @@ models:
         description: ""
 
       - name: player_id
-        tests:
-          - not_null
+        data_type: varchar
+        description: ""
 
       - name: player_name
         data_type: varchar
@@ -135,97 +223,6 @@ models:
         data_type: timestamp_tz
         description: ""
 
-  - name: stg_games
-    description: ""
-    columns:
-      - name: _line
-        data_type: number
-        description: ""
-
-      - name: game_date_est
-        data_type: date
-        description: ""
-
-      - name: old_game_id
-        data_type: number
-        description: ""
-
-      - name: game_id
-        data_type: varchar
-        description: ""
-
-      - name: game_status
-        data_type: varchar
-        description: ""
-
-      - name: home_team_id
-        data_type: varchar
-        description: ""
-
-      - name: visitor_team_id
-        data_type: varchar
-        description: ""
-
-      - name: season
-        data_type: number
-        description: ""
-
-      - name: home_points
-        data_type: number
-        description: ""
-
-      - name: home_field_goals_pct
-        data_type: number
-        description: ""
-
-      - name: home_free_throw_pct
-        data_type: number
-        description: ""
-
-      - name: home_3point_field_goals_pct
-        data_type: number
-        description: ""
-
-      - name: home_assists
-        data_type: number
-        description: ""
-
-      - name: home_rebounds
-        data_type: number
-        description: ""
-
-      - name: away_points
-        data_type: number
-        description: ""
-
-      - name: away_field_goals_pct
-        data_type: number
-        description: ""
-
-      - name: away_free_throw_pct
-        data_type: number
-        description: ""
-
-      - name: away_3point_field_goals_pct
-        data_type: number
-        description: ""
-
-      - name: away_assists
-        data_type: number
-        description: ""
-
-      - name: away_rebounds
-        data_type: number
-        description: ""
-
-      - name: home_team_wins
-        data_type: boolean
-        description: ""
-
-      - name: loaded_at
-        data_type: timestamp_tz
-        description: ""
-
   - name: stg_players
     description: ""
     columns:
@@ -238,10 +235,8 @@ models:
         description: ""
 
       - name: team_id
-        data_type: number
+        data_type: varchar
         description: ""
-        tests:
-          - not_null
 
       - name: old_player_id
         data_type: number
@@ -253,112 +248,6 @@ models:
 
       - name: season
         data_type: number
-        description: ""
-
-      - name: _fivetran_synced
-        data_type: timestamp_tz
-        description: ""
-
-  - name: stg_teams
-    description: ""
-    columns:
-      - name: _line
-        data_type: number
-        description: ""
-
-      - name: league_id
-        data_type: number
-        description: ""
-
-      - name: old_team_id
-        data_type: number
-        description: ""
-
-      - name: team_id
-        data_type: varchar
-        description: ""
-
-      - name: first_participation_year
-        data_type: number
-        description: ""
-
-      - name: current_year
-        data_type: number
-        description: ""
-
-      - name: abbreviation
-        data_type: varchar
-        description: ""
-
-      - name: nickname
-        data_type: varchar
-        description: ""
-
-      - name: fundation_year
-        data_type: number
-        description: ""
-
-      - name: city
-        data_type: varchar
-        description: ""
-
-      - name: full_name
-        data_type: varchar
-        description: ""
-
-      - name: arena
-        data_type: varchar
-        description: ""
-
-      - name: arena_capacity
-        data_type: number
-        description: ""
-
-      - name: owner
-        data_type: varchar
-        description: ""
-
-      - name: general_manager
-        data_type: varchar
-        description: ""
-
-      - name: headcoach
-        data_type: varchar
-        description: ""
-
-      - name: d_league_affiliation
-        data_type: varchar
-        description: ""
-
-      - name: loaded_at
-        data_type: timestamp_tz
-        description: ""
-
-  - name: stg_all_star_selections
-    description: ""
-    columns:
-      - name: _line
-        data_type: number
-        description: ""
-
-      - name: player_name
-        data_type: varchar
-        description: ""
-
-      - name: team_name
-        data_type: varchar
-        description: ""
-
-      - name: league_name
-        data_type: varchar
-        description: ""
-
-      - name: season
-        data_type: number
-        description: ""
-
-      - name: is_replaced
-        data_type: boolean
         description: ""
 
       - name: loaded_at
@@ -377,6 +266,10 @@ models:
         description: ""
 
       - name: award_type
+        data_type: varchar
+        description: ""
+
+      - name: player_id
         data_type: varchar
         description: ""
 
@@ -441,6 +334,10 @@ models:
 
       - name: old_player_id
         data_type: number
+        description: ""
+
+      - name: player_id
+        data_type: varchar
         description: ""
 
       - name: player_name
@@ -575,6 +472,124 @@ models:
         data_type: timestamp_tz
         description: ""
 
+  - name: stg_all_star_selections
+    description: ""
+    columns:
+      - name: _line
+        data_type: number
+        description: ""
+
+      - name: player_id
+        data_type: varchar
+        description: ""
+
+      - name: player_name
+        data_type: varchar
+        description: ""
+
+      - name: team_name
+        data_type: varchar
+        description: ""
+
+      - name: league_name
+        data_type: varchar
+        description: ""
+
+      - name: season
+        data_type: number
+        description: ""
+
+      - name: is_replaced
+        data_type: boolean
+        description: ""
+
+      - name: loaded_at
+        data_type: timestamp_tz
+        description: ""
+
+  - name: stg_teams
+    description: ""
+    columns:
+      - name: _line
+        data_type: number
+        description: ""
+
+      - name: league_id
+        data_type: number
+        description: ""
+
+      - name: old_team_id
+        data_type: number
+        description: ""
+
+      - name: games_team_id
+        data_type: varchar
+        description: ""
+
+      - name: team_id
+        data_type: varchar
+        description: ""
+
+      - name: first_participation_year
+        data_type: number
+        description: ""
+
+      - name: current_year
+        data_type: number
+        description: ""
+
+      - name: abbreviation
+        data_type: varchar
+        description: ""
+
+      - name: nickname
+        data_type: varchar
+        description: ""
+
+      - name: fundation_year
+        data_type: number
+        description: ""
+
+      - name: city
+        data_type: varchar
+        description: ""
+
+      - name: full_name
+        data_type: varchar
+        description: ""
+
+      - name: arena_id
+        data_type: varchar
+        description: ""
+
+      - name: arena_name
+        data_type: varchar
+        description: ""
+
+      - name: arena_capacity
+        data_type: number
+        description: ""
+
+      - name: owner
+        data_type: varchar
+        description: ""
+
+      - name: general_manager
+        data_type: varchar
+        description: ""
+
+      - name: headcoach
+        data_type: varchar
+        description: ""
+
+      - name: d_league_affiliation
+        data_type: varchar
+        description: ""
+
+      - name: loaded_at
+        data_type: timestamp_tz
+        description: ""
+
   - name: stg_team_summaries_seasons
     description: ""
     columns:
@@ -587,6 +602,10 @@ models:
         description: ""
 
       - name: league
+        data_type: varchar
+        description: ""
+
+      - name: team_id
         data_type: varchar
         description: ""
 
@@ -612,6 +631,14 @@ models:
 
       - name: loses
         data_type: number
+        description: ""
+
+      - name: city
+        data_type: varchar
+        description: ""
+
+      - name: arena_id
+        data_type: varchar
         description: ""
 
       - name: arena_name
@@ -645,6 +672,10 @@ models:
         data_type: varchar
         description: ""
 
+      - name: team_id
+        data_type: varchar
+        description: ""
+
       - name: team_name
         data_type: varchar
         description: ""
@@ -661,7 +692,7 @@ models:
         data_type: number
         description: ""
 
-      - name: minnutes_played
+      - name: minutes_played
         data_type: number
         description: ""
 

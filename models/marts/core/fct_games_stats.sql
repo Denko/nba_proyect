@@ -10,7 +10,7 @@ dates AS (
     SELECT *
     FROM {{ ref('stg_dates') }}
 ),
- -- CREAR UNIONES 
+
 renamed_casted AS (
     SELECT
 

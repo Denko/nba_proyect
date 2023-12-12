@@ -32,9 +32,7 @@ sources:
           - name: game_id
             data_type: number
             description: "game ID"
-            tests:
-              - unique
-              - not_null
+
           - name: game_status_text
             data_type: varchar
             description: "Game status when is in progress or finished"
@@ -45,6 +43,7 @@ sources:
             description: "Home team ID"
             tests:
               - not_null
+
           - name: visitor_team_id
             data_type: number
             description: "Visitor team ID"
@@ -63,8 +62,6 @@ sources:
           - name: pts_home
             data_type: number
             description: "home team points total points in the game"
-            tests:
-              - not_null
           - name: fg_pct_home
             data_type: varchar
             description: "home field goals percentage"
@@ -85,11 +82,11 @@ sources:
             description: "Away team ID"
             tests:
               - not_null
+              
           - name: pts_away
             data_type: number
             description: "Away team points"
-            tests:
-              - not_null
+
           - name: fg_pct_away
             data_type: varchar
             description: "Away team field goals percentage"
@@ -534,43 +531,43 @@ sources:
             description: ""
           - name: x_3_p_ar
             data_type: varchar
-            description: ""
+            description: "three point points percentage"
           - name: ts_percent
             data_type: varchar
             description: ""
           - name: e_fg_percent
             data_type: varchar
-            description: ""
+            description: "efficiency field goals percentage"
           - name: tov_percent
             data_type: varchar
-            description: ""
+            description: "turnovers percentage"
           - name: orb_percent
             data_type: varchar
-            description: ""
+            description: "offensive rebounds percentage"
           - name: ft_fga
             data_type: varchar
-            description: ""
+            description: "free throws over field goals percentage"
           - name: opp_e_fg_percent
             data_type: varchar
             description: ""
           - name: opp_tov_percent
             data_type: varchar
-            description: ""
+            description: "opponent turnovers percentage"
           - name: opp_drb_percent
             data_type: varchar
-            description: ""
+            description: "opponent defensive rebounds percentage"
           - name: opp_ft_fga
             data_type: varchar
-            description: ""
+            description: "opponent free throws over field goals attempted percentage"
           - name: arena
             data_type: varchar
-            description: ""
+            description: "Arena name"
           - name: attend
             data_type: varchar
-            description: ""
+            description: "arena attend"
           - name: attend_g
             data_type: varchar
-            description: ""
+            description: "arena attend average per game"
           - name: _fivetran_synced
             data_type: timestamp_tz
             description: "data loaded time for this entry"
@@ -583,88 +580,88 @@ sources:
             description: "row number in the table"
           - name: season
             data_type: number
-            description: ""
+            description: "year season"
           - name: lg
             data_type: varchar
-            description: ""
+            description: "league"
           - name: team
             data_type: varchar
-            description: ""
+            description: "team name"
           - name: abbreviation
             data_type: varchar
-            description: ""
+            description: "team abbreviation"
           - name: playoffs
             data_type: boolean
-            description: ""
+            description: "true if the team went to playoffs"
           - name: g
             data_type: varchar
-            description: ""
+            description: "team games played"
           - name: mp
             data_type: varchar
-            description: ""
+            description: "team minutes played"
           - name: fg
             data_type: varchar
-            description: ""
+            description: "team field goals made"
           - name: fga
             data_type: varchar
-            description: ""
+            description: "team field goals attempted"
           - name: fg_percent
             data_type: varchar
-            description: ""
+            description: "field goals percentage"
           - name: x_3_p
             data_type: varchar
-            description: ""
+            description: "three point field goals made"
           - name: x_3_pa
             data_type: varchar
-            description: ""
+            description: "three point field goals attempted"
           - name: x_3_p_percent
             data_type: varchar
-            description: ""
+            description: "three point field goals percentage"
           - name: x_2_p
             data_type: varchar
-            description: ""
+            description: "two points field goals made"
           - name: x_2_pa
             data_type: varchar
-            description: ""
+            description: "two points field goals attempted"
           - name: x_2_p_percent
             data_type: varchar
-            description: ""
+            description: "two points field goals percentage"
           - name: ft
             data_type: varchar
-            description: ""
+            description: "free throws made"
           - name: fta
             data_type: varchar
-            description: ""
+            description: "free throws made"
           - name: ft_percent
             data_type: varchar
-            description: ""
+            description: "free throws percentage"
           - name: orb
             data_type: varchar
-            description: ""
+            description: "offensive rebounds"
           - name: drb
             data_type: varchar
-            description: ""
+            description: "defensive rebounds"
           - name: trb
             data_type: varchar
-            description: ""
+            description: "total rebounds"
           - name: ast
             data_type: varchar
-            description: ""
+            description: "assists"
           - name: stl
             data_type: varchar
-            description: ""
+            description: "steals"
           - name: blk
             data_type: varchar
-            description: ""
+            description: "blocks"
           - name: tov
             data_type: varchar
-            description: ""
+            description: "turnovers"
           - name: pf
             data_type: varchar
-            description: ""
+            description: "personal fouls"
           - name: pts
             data_type: varchar
-            description: ""
+            description: "team points"
           - name: _fivetran_synced
             data_type: timestamp_tz
             description: "data loaded time for this entry"

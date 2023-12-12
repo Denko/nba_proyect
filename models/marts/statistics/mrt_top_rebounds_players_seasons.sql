@@ -13,7 +13,7 @@ dates AS (
     SELECT distinct year_date
     FROM {{ ref('stg_dates') }}
 )
-
+-- FALTA UNIR CON EL INTERMEDIATE DE PLAYERS
 SELECT 
   player_name, 
   season, 

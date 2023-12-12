@@ -1,105 +1,6 @@
 version: 2
 
 models:
-  - name: base_games
-    description: ""
-    columns:
-      - name: _line
-        data_type: number
-        description: ""
-
-      - name: game_date_est
-        data_type: varchar
-        description: ""
-
-      - name: old_game_id
-        data_type: number
-        description: ""
-
-      - name: game_id
-        data_type: varchar
-        description: ""
-
-      - name: game_status_text
-        data_type: varchar
-        description: ""
-
-      - name: home_team_id
-        data_type: number
-        description: ""
-
-      - name: visitor_team_id
-        data_type: number
-        description: ""
-
-      - name: season
-        data_type: number
-        description: ""
-
-      - name: team_id_home
-        data_type: number
-        description: ""
-
-      - name: pts_home
-        data_type: number
-        description: ""
-
-      - name: fg_pct_home
-        data_type: varchar
-        description: ""
-
-      - name: ft_pct_home
-        data_type: varchar
-        description: ""
-
-      - name: fg_3_pct_home
-        data_type: varchar
-        description: ""
-
-      - name: ast_home
-        data_type: number
-        description: ""
-
-      - name: reb_home
-        data_type: number
-        description: ""
-
-      - name: team_id_away
-        data_type: number
-        description: ""
-
-      - name: pts_away
-        data_type: number
-        description: ""
-
-      - name: fg_pct_away
-        data_type: varchar
-        description: ""
-
-      - name: ft_pct_away
-        data_type: varchar
-        description: ""
-
-      - name: fg_3_pct_away
-        data_type: varchar
-        description: ""
-
-      - name: ast_away
-        data_type: number
-        description: ""
-
-      - name: reb_away
-        data_type: number
-        description: ""
-
-      - name: home_team_wins
-        data_type: number
-        description: ""
-
-      - name: _fivetran_synced
-        data_type: timestamp_tz
-        description: ""
-
   - name: base_games_details
     description: ""
     columns:
@@ -107,7 +8,7 @@ models:
         data_type: number
         description: ""
 
-      - name: games_data_id
+      - name: game_detail_id
         data_type: varchar
         description: ""
 
@@ -127,8 +28,12 @@ models:
         data_type: varchar
         description: ""
 
-      - name: player_id
+      - name: old_player_id
         data_type: number
+        description: ""
+
+      - name: player_id
+        data_type: varchar
         description: ""
 
       - name: player_name
@@ -231,6 +136,105 @@ models:
         data_type: timestamp_tz
         description: ""
 
+  - name: base_games
+    description: ""
+    columns:
+      - name: _line
+        data_type: number
+        description: ""
+
+      - name: game_date_est
+        data_type: varchar
+        description: ""
+
+      - name: old_game_id
+        data_type: number
+        description: ""
+
+      - name: game_id
+        data_type: varchar
+        description: ""
+
+      - name: game_status_text
+        data_type: varchar
+        description: ""
+
+      - name: home_team_id
+        data_type: number
+        description: ""
+
+      - name: visitor_team_id
+        data_type: number
+        description: ""
+
+      - name: season
+        data_type: number
+        description: ""
+
+      - name: team_id_home
+        data_type: number
+        description: ""
+
+      - name: pts_home
+        data_type: number
+        description: ""
+
+      - name: fg_pct_home
+        data_type: varchar
+        description: ""
+
+      - name: ft_pct_home
+        data_type: varchar
+        description: ""
+
+      - name: fg_3_pct_home
+        data_type: varchar
+        description: ""
+
+      - name: ast_home
+        data_type: number
+        description: ""
+
+      - name: reb_home
+        data_type: number
+        description: ""
+
+      - name: team_id_away
+        data_type: number
+        description: ""
+
+      - name: pts_away
+        data_type: number
+        description: ""
+
+      - name: fg_pct_away
+        data_type: varchar
+        description: ""
+
+      - name: ft_pct_away
+        data_type: varchar
+        description: ""
+
+      - name: fg_3_pct_away
+        data_type: varchar
+        description: ""
+
+      - name: ast_away
+        data_type: number
+        description: ""
+
+      - name: reb_away
+        data_type: number
+        description: ""
+
+      - name: home_team_wins
+        data_type: number
+        description: ""
+
+      - name: _fivetran_synced
+        data_type: timestamp_tz
+        description: ""
+
   - name: base_players
     description: ""
     columns:
@@ -297,6 +301,10 @@ models:
         data_type: varchar
         description: ""
 
+      - name: full_name
+        data_type: varchar
+        description: ""
+
       - name: yearfounded
         data_type: number
         description: ""
@@ -332,7 +340,66 @@ models:
       - name: _fivetran_synced
         data_type: timestamp_tz
         description: ""
-        
+
+  - name: base_player_award_shares
+    description: ""
+    columns:
+      - name: _line
+        data_type: number
+        description: ""
+
+      - name: season
+        data_type: number
+        description: ""
+
+      - name: award
+        data_type: varchar
+        description: ""
+
+      - name: player
+        data_type: varchar
+        description: ""
+
+      - name: age
+        data_type: number
+        description: ""
+
+      - name: tm
+        data_type: varchar
+        description: ""
+
+      - name: first_points
+        data_type: varchar
+        description: ""
+
+      - name: pts_won
+        data_type: varchar
+        description: ""
+
+      - name: pts_max
+        data_type: varchar
+        description: ""
+
+      - name: share
+        data_type: varchar
+        description: ""
+
+      - name: winner
+        data_type: varchar
+        description: ""
+
+      - name: seas_id
+        data_type: number
+        description: ""
+
+      - name: player_id
+        data_type: number
+        description: ""
+
+      - name: _fivetran_synced
+        data_type: timestamp_tz
+        description: ""
+
   - name: base_player_totals_seasons
     description: ""
     columns:

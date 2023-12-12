@@ -12,7 +12,7 @@ teams2 AS (
         city,
         season
     FROM {{ ref('stg_team_summaries_seasons') }}
-    WHERE season > 2002
+
 ),
 dates AS (
     SELECT distinct year_date
@@ -36,7 +36,7 @@ renamed_casted AS (
     on teams1.arena_id = teams2.arena_id
     inner join 
     dates on teams2.season = dates.year_date
-    order by teams2.season
+    order by teams2.season desc
 )
 
 SELECT * FROM renamed_casted
