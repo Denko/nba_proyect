@@ -12,19 +12,19 @@ int_teams as (
 ),
 dates as (
 
-    select * from {{ ref('stg_dates') }}
+    select distinct year_date from {{ ref('stg_dates') }}
 
 ),
--- HACER JOINS
+
 renamed as (
 
     select
 
         season,
         league,
-        team_id,
-        team_name,
-        team_abbreviation,
+        team_totals_seasons.team_id,
+        team_totals_seasons.team_name,
+        team_totals_seasons.team_abbreviation,
         is_in_playoffs,
         games_played,
         minutes_played,
@@ -51,6 +51,14 @@ renamed as (
         points
 
     from team_totals_seasons
+    inner join int_teams
+    on team_totals_seasons.team_id = int_teams.team_id
+    inner join
+    dates
+    on team_totals_seasons.season = dates.year_date
+
+    order by season desc, team_totals_seasons.team_name
+
 
 )
 

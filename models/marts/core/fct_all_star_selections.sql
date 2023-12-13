@@ -41,7 +41,7 @@ renamed as (
     inner join 
     dates on all_star_selections.season = dates.year_date
 
-    order by all_star_selections.season desc, all_star_selections.team_name
+    order by all_star_selections.season asc, all_star_selections.team_name
 
 )
 
