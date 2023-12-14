@@ -1,6 +1,6 @@
 WITH teams AS (
     SELECT *
-    FROM {{ source('google_drive','teams') }}
+    FROM {{ ref('teams_snapshot') }}
 ),
 
 renamed_casted AS (
@@ -22,7 +22,10 @@ renamed_casted AS (
         GENERALMANAGER, 
         HEADCOACH, 
         DLEAGUEAFFILIATION, 
-        _FIVETRAN_SYNCED
+        _FIVETRAN_SYNCED,
+        DBT_UPDATED_AT, 
+        DBT_VALID_FROM, 
+        DBT_VALID_TO
     FROM teams
 )
 

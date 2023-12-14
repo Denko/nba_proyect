@@ -45,11 +45,11 @@ renamed AS (
 
         player_totals.player_id,
         player_totals.player_name,
-        -- AÑADIR NÚMERO DE PARTICIPACIONES EN EL ALL-STAR DE STG_ALL_STARs_SELECTIONS
+        -- NÚMERO DE PARTICIPACIONES EN EL ALL-STAR, SI LOS TIENE
         decode(
             times_all_star_selected, null, '0', times_all_star_selected
         )::integer AS times_all_star_selected,
-        -- AÑADIR PREMIOS, SI LOS TIENE DE STG_PLAYER_AWARD_SHARES
+        -- PREMIOS, SI LOS TIENE
         decode(player_awards_counter, null, '0', player_awards_counter)::integer AS player_awards_counter,
         -- Estadísticas totales del jugador
         sum(games_played) AS total_games_played,

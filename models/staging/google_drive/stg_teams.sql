@@ -24,7 +24,10 @@ renamed_casted AS (
         generalmanager::varchar(120) AS general_manager,
         headcoach::varchar(120) AS headcoach,
         dleagueaffiliation::varchar(120) AS d_league_affiliation,
-        _fivetran_synced AS loaded_at
+        _fivetran_synced AS loaded_at,
+        DBT_UPDATED_AT, 
+        DBT_VALID_FROM, 
+        DBT_VALID_TO
     FROM teams
 )
 
