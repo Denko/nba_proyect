@@ -28,11 +28,7 @@ renamed_casted AS (
         int_teams.owner,
         int_teams.general_manager,
         int_teams.headcoach,
-        int_teams.d_league_affiliation,
-        -- AÑADIR LAS ESTADÍSTICAS TOTALES SUMADAS DE LAS TEMPORADAS QUE HAY, DE 2004 A 2021 DE STG_TEAM_TOTALS_SEASONS
-        sum(teams_totals.minutes_played) as total_minutes_played,
-        sum(teams_totals.games_played) as total_games_played
-        -- O HACER EN AGREGADOS DESPUÉS DE LAS DIMENSIONES
+        int_teams.d_league_affiliation
 
     FROM teams_totals
     left join
