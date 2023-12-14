@@ -1,0 +1,217 @@
+version: 2
+
+models:
+  - name: agg_players_teams_seasons
+    description: ""
+    columns:
+      - name: player_id
+        data_type: varchar
+        description: ""
+
+      - name: team_id
+        data_type: varchar
+        description: ""
+
+      - name: season
+        data_type: number
+        description: ""
+
+  - name: agg_top_assists_players_seasons
+    description: ""
+    columns:
+      - name: player_id
+        data_type: varchar
+        description: ""
+
+      - name: player_name
+        data_type: varchar
+        description: ""
+
+      - name: season
+        data_type: number
+        description: ""
+
+      - name: total_assists
+        data_type: number
+        description: ""
+
+      - name: games_played
+        data_type: number
+        description: ""
+
+      - name: avg_assists
+        data_type: number
+        description: ""
+
+  - name: agg_top_rebounds_players_seasons
+    description: ""
+    columns:
+      - name: player_id
+        data_type: varchar
+        description: ""
+
+      - name: player_name
+        data_type: varchar
+        description: ""
+
+      - name: season
+        data_type: number
+        description: ""
+
+      - name: total_rebounds
+        data_type: number
+        description: ""
+
+      - name: games_played
+        data_type: number
+        description: ""
+
+      - name: avg_rebounds
+        data_type: number
+        description: ""
+
+  - name: agg_top_score_players_seasons
+    description: ""
+    columns:
+      - name: player_id
+        data_type: varchar
+        description: ""
+
+      - name: player_name
+        data_type: varchar
+        description: ""
+
+      - name: season
+        data_type: number
+        description: ""
+
+      - name: total_points
+        data_type: number
+        description: ""
+
+      - name: games_played
+        data_type: number
+        description: ""
+
+      - name: avg_points
+        data_type: number
+        description: ""
+
+  - name: agg_total_stats_players
+    description: ""
+    columns:
+      - name: player_id
+        data_type: varchar
+        description: ""
+
+      - name: player_name
+        data_type: varchar
+        description: ""
+
+      - name: times_all_star_selected
+        data_type: number
+        description: ""
+
+      - name: player_awards_counter
+        data_type: number
+        description: ""
+
+      - name: total_games_played
+        data_type: number
+        description: ""
+
+      - name: total_games_started
+        data_type: number
+        description: ""
+
+      - name: total_minutes_played
+        data_type: number
+        description: ""
+
+      - name: total_points
+        data_type: number
+        description: ""
+
+      - name: total_field_goals_made
+        data_type: number
+        description: ""
+
+      - name: total_field_goals_attempted
+        data_type: number
+        description: ""
+
+      - name: field_goals_pct
+        data_type: number
+        description: ""
+
+      - name: total_three_points_field_goals_made
+        data_type: number
+        description: ""
+
+      - name: total_three_points_field_goals_attempted
+        data_type: number
+        description: ""
+
+      - name: three_points_field_goals_pct
+        data_type: number
+        description: ""
+
+      - name: total_two_points_field_goals_made
+        data_type: number
+        description: ""
+
+      - name: total_two_points_field_goals_attempted
+        data_type: number
+        description: ""
+
+      - name: two_points_field_goals_pct
+        data_type: number
+        description: ""
+
+      - name: eficiency_field_goals_pct
+        data_type: number
+        description: ""
+
+      - name: total_free_throws_made
+        data_type: number
+        description: ""
+
+      - name: total_free_throws_attempted
+        data_type: number
+        description: ""
+
+      - name: free_throws_pct
+        data_type: number
+        description: ""
+
+      - name: total_offensive_rebounds
+        data_type: number
+        description: ""
+
+      - name: total_defensive_rebounds
+        data_type: number
+        description: ""
+
+      - name: total_rebounds
+        data_type: number
+        description: ""
+
+      - name: total_assists
+        data_type: number
+        description: ""
+
+      - name: total_steals
+        data_type: number
+        description: ""
+
+      - name: total_blocks
+        data_type: number
+        description: ""
+
+      - name: total_turnovers
+        data_type: number
+        description: ""
+
+      - name: total_persona_fouls_made
+        data_type: number
+        description: ""

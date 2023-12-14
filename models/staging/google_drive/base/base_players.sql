@@ -1,6 +1,6 @@
 WITH players AS (
     SELECT *
-    FROM {{ source('games_data','players') }}
+    FROM {{ source('google_drive','players') }}
 ),
 
 renamed_casted AS (
@@ -9,7 +9,7 @@ renamed_casted AS (
         PLAYER_NAME, 
         TEAM_ID, 
         PLAYER_ID AS OLD_PLAYER_ID,
-        {{dbt_utils.generate_surrogate_key(['PLAYER_ID'])}}::varchar(256) as PLAYER_ID, 
+        {{dbt_utils.generate_surrogate_key(['PLAYER_NAME'])}}::varchar(256) as PLAYER_ID, 
         SEASON, 
         _FIVETRAN_SYNCED
     FROM players

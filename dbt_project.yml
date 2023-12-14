@@ -46,12 +46,20 @@ models:
         +schema: games_data
       stats:
         +schema: stats
+      google_drive:
+        +schema: google_drive
       
     marts:
       +materialized: table
       +database: "{{ env_var('DBT_ENVIRONMENTS') }}_GOLD_DB"
       core:
         +schema: core
+      players_stats:
+        +schema: players_stats
+      games_stats:
+        +schema: games_stats
+      teams_stats:
+        +schema: teams_stats
 seeds:
   +schema: seed_data
   +database: "{{ env_var('DBT_ENVIRONMENTS') }}_BRONZE_DB"        
