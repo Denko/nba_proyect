@@ -20,7 +20,7 @@ models:
         data_type: varchar
         description: ""
 
-  - name: dim_date
+  - name: dim_dates
     description: ""
     columns:
       - name: date_forecast
@@ -47,97 +47,6 @@ models:
         data_type: number
         description: ""
 
-      - name: day_before
-        data_type: date
-        description: ""
-
-      - name: year_week_day
-        data_type: varchar
-        description: ""
-
-      - name: week_date
-        data_type: number
-        description: ""
-
-  - name: dim_games
-    description: ""
-    columns:
-      - name: game_date_est
-        data_type: date
-        description: ""
-
-      - name: game_id
-        data_type: varchar
-        description: ""
-
-      - name: game_status
-        data_type: varchar
-        description: ""
-
-      - name: home_team_id
-        data_type: varchar
-        description: ""
-
-      - name: visitor_team_id
-        data_type: varchar
-        description: ""
-
-      - name: season
-        data_type: number
-        description: ""
-
-      - name: home_points
-        data_type: number
-        description: ""
-
-      - name: home_field_goals_pct
-        data_type: number
-        description: ""
-
-      - name: home_free_throws_pct
-        data_type: number
-        description: ""
-
-      - name: home_3point_field_goals_pct
-        data_type: number
-        description: ""
-
-      - name: home_assists
-        data_type: number
-        description: ""
-
-      - name: home_rebounds
-        data_type: number
-        description: ""
-
-      - name: away_points
-        data_type: number
-        description: ""
-
-      - name: away_field_goals_pct
-        data_type: number
-        description: ""
-
-      - name: away_free_throws_pct
-        data_type: number
-        description: ""
-
-      - name: away_3point_field_goals_pct
-        data_type: number
-        description: ""
-
-      - name: away_assists
-        data_type: number
-        description: ""
-
-      - name: away_rebounds
-        data_type: number
-        description: ""
-
-      - name: home_team_wins
-        data_type: boolean
-        description: ""
-
   - name: dim_players
     description: ""
     columns:
@@ -160,7 +69,7 @@ models:
         data_type: varchar
         description: ""
 
-      - name: full_name
+      - name: team_name
         data_type: varchar
         description: ""
 
@@ -168,7 +77,7 @@ models:
         data_type: number
         description: ""
 
-      - name: abbreviation
+      - name: team_abbreviation
         data_type: varchar
         description: ""
 
@@ -177,10 +86,6 @@ models:
         description: ""
 
       - name: city
-        data_type: varchar
-        description: ""
-
-      - name: arena_id
         data_type: varchar
         description: ""
 
@@ -208,34 +113,22 @@ models:
         data_type: number
         description: ""
 
-  - name: fct_arenas_seasons
+  - name: fct_all_star_selections
     description: ""
     columns:
-      - name: arena_id
+      - name: player_id
         data_type: varchar
         description: ""
 
-      - name: team_id
+      - name: player_name
         data_type: varchar
         description: ""
 
-      - name: arena_name
+      - name: team_name
         data_type: varchar
         description: ""
 
-      - name: arena_capacity
-        data_type: number
-        description: ""
-
-      - name: total_attend
-        data_type: number
-        description: ""
-
-      - name: average_attend
-        data_type: number
-        description: ""
-
-      - name: city
+      - name: league_name
         data_type: varchar
         description: ""
 
@@ -243,9 +136,21 @@ models:
         data_type: number
         description: ""
 
+      - name: is_replaced
+        data_type: boolean
+        description: ""
+
   - name: fct_games_details
     description: ""
     columns:
+      - name: game_date_est
+        data_type: date
+        description: ""
+
+      - name: season
+        data_type: number
+        description: ""
+
       - name: game_detail_id
         data_type: varchar
         description: ""
@@ -350,19 +255,8 @@ models:
         data_type: number
         description: ""
 
-  - name: fct_players_teams
-    description: ""
-    columns:
-      - name: player_id
-        data_type: varchar
-        description: ""
-
-      - name: team_id
-        data_type: varchar
-        description: ""
-
-      - name: season
-        data_type: number
+      - name: loaded_at
+        data_type: timestamp_tz
         description: ""
 
   - name: fct_player_awards
@@ -374,6 +268,10 @@ models:
 
       - name: award_type
         data_type: varchar
+        description: ""
+
+      - name: winner
+        data_type: boolean
         description: ""
 
       - name: player_id
@@ -388,7 +286,7 @@ models:
         data_type: number
         description: ""
 
-      - name: team_abbreviation
+      - name: team_name
         data_type: varchar
         description: ""
 
@@ -406,43 +304,4 @@ models:
 
       - name: share_pct
         data_type: number
-        description: ""
-
-      - name: winner
-        data_type: boolean
-        description: ""
-
-      - name: old_season_id
-        data_type: number
-        description: ""
-
-      - name: old_player_id
-        data_type: number
-        description: ""
-
-  - name: fct_all_star_selections
-    description: ""
-    columns:
-      - name: player_id
-        data_type: varchar
-        description: ""
-
-      - name: player_name
-        data_type: varchar
-        description: ""
-
-      - name: team_name
-        data_type: varchar
-        description: ""
-
-      - name: league_name
-        data_type: varchar
-        description: ""
-
-      - name: season
-        data_type: number
-        description: ""
-
-      - name: is_replaced
-        data_type: boolean
         description: ""

@@ -1,6 +1,17 @@
+{{ config(
+    materialized='incremental',
+    unique_key = 'game_detail_id'
+    ) 
+}}
+
 WITH games_details AS (
     SELECT *
     FROM {{ ref('stg_games_details') }}
+    {% if is_incremental() %}
+
+        WHERE loaded_at > (SELECT max(loaded_at) FROM {{ this }})
+
+    {% endif %}
 ),
 teams AS (
     SELECT *
@@ -13,6 +24,11 @@ players AS (
 games AS (
     SELECT *
     FROM {{ ref("stg_games") }}
+    {% if is_incremental() %}
+
+        WHERE loaded_at > (SELECT max(loaded_at) FROM {{ this }})
+
+    {% endif %}
 ),
 dates AS (
     SELECT *
@@ -51,7 +67,8 @@ renamed_casted AS (
         turnovers, 
         personal_fouls, 
         points, 
-        plus_minus
+        plus_minus,
+        games_details.loaded_at
 
     FROM games_details
     full join

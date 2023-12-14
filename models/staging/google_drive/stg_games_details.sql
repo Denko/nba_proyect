@@ -1,6 +1,17 @@
+{{ config(
+    materialized='incremental',
+    unique_key = 'game_detail_id'
+    ) 
+}}
+
 WITH games_details AS (
     SELECT *
     FROM {{ ref('base_games_details') }}
+    {% if is_incremental() %}
+
+        WHERE _FIVETRAN_SYNCED > (SELECT max(loaded_at) FROM {{ this }})
+
+    {% endif %}
 ),
 
 renamed_casted AS (

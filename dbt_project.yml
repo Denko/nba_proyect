@@ -54,12 +54,12 @@ models:
       +database: "{{ env_var('DBT_ENVIRONMENTS') }}_GOLD_DB"
       core:
         +schema: core
-      player_stats:
-        +schema: player_stats
+      players_stats:
+        +schema: players_stats
       games_stats:
         +schema: games_stats
       teams_stats:
-        +schema: schema
+        +schema: teams_stats
 seeds:
   +schema: seed_data
   +database: "{{ env_var('DBT_ENVIRONMENTS') }}_BRONZE_DB"        

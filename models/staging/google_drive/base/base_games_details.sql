@@ -1,6 +1,17 @@
+{{ config(
+    materialized='incremental',
+    unique_key = 'GAME_DETAIL_ID'
+    ) 
+}}
+
 WITH games_details AS (
     SELECT *
     FROM {{ source('google_drive','games_details') }}
+    {% if is_incremental() %}
+
+        WHERE _FIVETRAN_SYNCED > (SELECT max(_FIVETRAN_SYNCED) FROM {{ this }})
+
+    {% endif %}
 ),
 
 renamed_casted AS (

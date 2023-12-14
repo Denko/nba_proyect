@@ -1,0 +1,255 @@
+version: 2
+
+models:
+  - name: agg_arenas_seasons
+    description: ""
+    columns:
+      - name: arena_id
+        data_type: varchar
+        description: ""
+
+      - name: team_id
+        data_type: varchar
+        description: ""
+
+      - name: arena_name
+        data_type: varchar
+        description: ""
+
+      - name: arena_capacity
+        data_type: number
+        description: ""
+
+      - name: total_attend
+        data_type: number
+        description: ""
+
+      - name: average_attend
+        data_type: number
+        description: ""
+
+      - name: city
+        data_type: varchar
+        description: ""
+
+      - name: season
+        data_type: number
+        description: ""
+
+  - name: agg_team_total_seasons
+    description: ""
+    columns:
+      - name: season
+        data_type: number
+        description: ""
+
+      - name: league
+        data_type: varchar
+        description: ""
+
+      - name: team_id
+        data_type: varchar
+        description: ""
+
+      - name: team_name
+        data_type: varchar
+        description: ""
+
+      - name: team_abbreviation
+        data_type: varchar
+        description: ""
+
+      - name: is_in_playoffs
+        data_type: boolean
+        description: ""
+
+      - name: games_played
+        data_type: number
+        description: ""
+
+      - name: minutes_played
+        data_type: number
+        description: ""
+
+      - name: field_goals_made
+        data_type: number
+        description: ""
+
+      - name: field_goals_attempted
+        data_type: number
+        description: ""
+
+      - name: field_goals_pct
+        data_type: number
+        description: ""
+
+      - name: three_points_field_goals_made
+        data_type: number
+        description: ""
+
+      - name: three_points_field_goals_attempted
+        data_type: number
+        description: ""
+
+      - name: three_points_field_goals_pct
+        data_type: number
+        description: ""
+
+      - name: two_points_field_goals_made
+        data_type: number
+        description: ""
+
+      - name: two_points_field_goals_attempted
+        data_type: number
+        description: ""
+
+      - name: two_points_field_goals_pct
+        data_type: number
+        description: ""
+
+      - name: free_throws_made
+        data_type: number
+        description: ""
+
+      - name: free_throws_attempted
+        data_type: number
+        description: ""
+
+      - name: free_throws_pct
+        data_type: number
+        description: ""
+
+      - name: offensive_rebounds
+        data_type: number
+        description: ""
+
+      - name: defensive_rebounds
+        data_type: number
+        description: ""
+
+      - name: total_rebounds
+        data_type: number
+        description: ""
+
+      - name: assists
+        data_type: number
+        description: ""
+
+      - name: steals
+        data_type: number
+        description: ""
+
+      - name: blocks
+        data_type: number
+        description: ""
+
+      - name: turnovers
+        data_type: number
+        description: ""
+
+      - name: persona_fouls
+        data_type: number
+        description: ""
+
+      - name: points
+        data_type: number
+        description: ""
+
+  - name: agg_total_stats_teams
+    description: ""
+    columns:
+      - name: team_id
+        data_type: varchar
+        description: ""
+
+      - name: team_name
+        data_type: varchar
+        description: ""
+
+      - name: total_games_played
+        data_type: number
+        description: ""
+
+      - name: total_minutes_played
+        data_type: number
+        description: ""
+
+      - name: total_points
+        data_type: number
+        description: ""
+
+      - name: total_field_goals_made
+        data_type: number
+        description: ""
+
+      - name: total_field_goals_attempted
+        data_type: number
+        description: ""
+
+      - name: field_goals_pct
+        data_type: number
+        description: ""
+
+      - name: total_three_points_field_goals_made
+        data_type: number
+        description: ""
+
+      - name: total_three_points_field_goals_attempted
+        data_type: number
+        description: ""
+
+      - name: three_points_field_goals_pct
+        data_type: number
+        description: ""
+
+      - name: total_two_points_field_goals_made
+        data_type: number
+        description: ""
+
+      - name: total_two_points_field_goals_attempted
+        data_type: number
+        description: ""
+
+      - name: two_points_field_goals_pct
+        data_type: number
+        description: ""
+
+      - name: total_free_throws_made
+        data_type: number
+        description: ""
+
+      - name: total_free_throws_attempted
+        data_type: number
+        description: ""
+
+      - name: free_throws_pct
+        data_type: number
+        description: ""
+
+      - name: total_offensive_rebounds
+        data_type: number
+        description: ""
+
+      - name: total_defensive_rebounds
+        data_type: number
+        description: ""
+
+      - name: total_total_rebounds
+        data_type: number
+        description: ""
+
+      - name: total_assists
+        data_type: number
+        description: ""
+
+      - name: total_steals
+        data_type: number
+        description: ""
+
+      - name: total_blocks
+        data_type: number
+        description: ""
+
+      - name: total_persona_fouls
+        data_type: number
+        description: ""

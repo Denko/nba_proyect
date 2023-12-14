@@ -1,0 +1,86 @@
+version: 2
+
+models:
+  - name: agg_most_join_annotation_seasons
+    description: ""
+    columns:
+      - name: game_id
+        data_type: varchar
+        description: ""
+
+      - name: team1_id
+        data_type: varchar
+        description: ""
+
+      - name: team2_id
+        data_type: varchar
+        description: ""
+
+      - name: total_game_points
+        data_type: number
+        description: ""
+
+      - name: season
+        data_type: number
+        description: ""
+
+  - name: agg_most_joint_annotation_total
+    description: ""
+    columns:
+      - name: game_id
+        data_type: varchar
+        description: ""
+
+      - name: team1_id
+        data_type: varchar
+        description: ""
+
+      - name: team2_id
+        data_type: varchar
+        description: ""
+
+      - name: total_game_points
+        data_type: number
+        description: ""
+
+  - name: agg_top_points_diff_seasons
+    description: ""
+    columns:
+      - name: game_id
+        data_type: varchar
+        description: ""
+
+      - name: team1_id
+        data_type: varchar
+        description: ""
+
+      - name: team2_id
+        data_type: varchar
+        description: ""
+
+      - name: points_difference
+        data_type: number
+        description: ""
+
+      - name: season
+        data_type: number
+        description: ""
+
+  - name: agg_top_points_diff_total
+    description: ""
+    columns:
+      - name: game_id
+        data_type: varchar
+        description: ""
+
+      - name: team1_id
+        data_type: varchar
+        description: ""
+
+      - name: team2_id
+        data_type: varchar
+        description: ""
+
+      - name: points_difference
+        data_type: number
+        description: ""

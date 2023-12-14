@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: int_players
+    description: ""
+    columns:
+      - name: player_id
+        data_type: varchar
+        description: ""
+
+      - name: player_name
+        data_type: varchar
+        description: ""
+
+      - name: games_player_id
+        data_type: number
+        description: ""
+
+  - name: int_teams
+    description: ""
+    columns:
+      - name: team_id
+        data_type: varchar
+        description: ""
+
+      - name: games_team_id
+        data_type: varchar
+        description: ""
+
+      - name: nickname
+        data_type: varchar
+        description: ""
+
+      - name: team_name
+        data_type: varchar
+        description: ""
+
+      - name: first_participation_year
+        data_type: number
+        description: ""
+
+      - name: team_abbreviation
+        data_type: varchar
+        description: ""
+
+      - name: fundation_year
+        data_type: number
+        description: ""
+
+      - name: city
+        data_type: varchar
+        description: ""
+
+      - name: owner
+        data_type: varchar
+        description: ""
+
+      - name: general_manager
+        data_type: varchar
+        description: ""
+
+      - name: headcoach
+        data_type: varchar
+        description: ""
+
+      - name: d_league_affiliation
+        data_type: varchar
+        description: ""
